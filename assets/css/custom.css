@@ -1,0 +1,108 @@
+/* Haven Arch — layout additions on top of Paradigm Shift */
+
+.brand {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.85rem;
+	border-bottom: 0;
+	margin-bottom: 1.25rem;
+	color: inherit;
+}
+
+.brand-logo {
+	width: 3.5rem;
+	height: 3.5rem;
+	display: block;
+	background: transparent;
+}
+
+.brand-mark {
+	font-family: "Raleway", sans-serif;
+	font-size: 0.7rem;
+	font-weight: 800;
+	letter-spacing: 0.25rem;
+	text-transform: uppercase;
+}
+
+.site-nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2rem 0;
+}
+
+.site-nav li {
+	margin: 0.35rem 0;
+}
+
+.site-nav a {
+	border-bottom: 0;
+	font-family: "Raleway", sans-serif;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.18rem;
+	text-transform: uppercase;
+}
+
+.site-nav a.is-active {
+	border-bottom: 1px solid currentColor;
+}
+
+.filter-bar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	margin: 0 0 1.75rem 0;
+}
+
+.gallery-projects a {
+	overflow: hidden;
+}
+
+.gallery-projects .caption {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 1.25rem 1.1rem;
+	background: linear-gradient(transparent, rgba(17, 17, 17, 0.72));
+	color: #fff;
+	font-size: 0.85rem;
+	letter-spacing: 0.04rem;
+}
+
+.gallery-projects .caption strong {
+	display: block;
+	font-size: 1rem;
+	letter-spacing: 0.08rem;
+	text-transform: uppercase;
+}
+
+.project-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem 2rem;
+	list-style: none;
+	padding: 0;
+	margin: 0 0 2rem 0;
+	font-size: 0.9rem;
+}
+
+.project-meta strong {
+	display: block;
+	font-size: 0.7rem;
+	letter-spacing: 0.16rem;
+	text-transform: uppercase;
+	opacity: 0.7;
+}
+
+.form-note {
+	font-size: 0.85rem;
+	opacity: 0.75;
+}
+
+@media screen and (max-width: 1152px) {
+	.brand {
+		justify-content: flex-start;
+	}
+}

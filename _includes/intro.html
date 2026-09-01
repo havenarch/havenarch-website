@@ -1,0 +1,26 @@
+<section class="intro">
+	<header>
+		<a class="brand" href="{{ '/' | relative_url }}">
+			<img class="brand-logo" src="{{ '/images/logo.svg' | relative_url }}" alt="{{ site.title }} logo" width="56" height="56" />
+			<span class="brand-mark">Studio</span>
+		</a>
+		<h1>{{ site.title }}</h1>
+		<p>{{ site.description }}</p>
+		<nav class="site-nav" aria-label="Primary">
+			<ul>
+				<li><a href="{{ '/' | relative_url }}"{% if page.layout == "home" %} class="is-active"{% endif %}>Home</a></li>
+				<li><a href="{{ '/portfolio/' | relative_url }}"{% if page.url contains '/portfolio' %} class="is-active"{% endif %}>Portfolio</a></li>
+				<li><a href="{{ '/about/' | relative_url }}"{% if page.url contains '/about' %} class="is-active"{% endif %}>About</a></li>
+				<li><a href="{{ '/contact/' | relative_url }}"{% if page.url contains '/contact' %} class="is-active"{% endif %}>Contact</a></li>
+			</ul>
+		</nav>
+		{% if page.layout == "home" %}
+		<ul class="actions">
+			<li><a href="#projects" class="arrow scrolly"><span class="label">Next</span></a></li>
+		</ul>
+		{% endif %}
+	</header>
+	<div class="content">
+		<span class="image fill" data-position="center"><img src="{{ '/images/pic01.jpg' | relative_url }}" alt="Haven Arch studio work" /></span>
+	</div>
+</section>

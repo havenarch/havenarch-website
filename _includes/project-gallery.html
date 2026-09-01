@@ -1,0 +1,15 @@
+{% assign source = site.projects | sort: "year" | reverse %}
+{% if include.featured_only %}
+	{% assign source = source | where: "featured", true %}
+{% endif %}
+<div class="gallery gallery-projects">
+	{% for project in source %}
+	<a href="{{ project.url | relative_url }}"{% cycle ' class="landscape"', '', '' %} data-category="{{ project.category | downcase }}">
+		<img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}" />
+		<span class="caption">
+			<strong>{{ project.title }}</strong>
+			{{ project.category }}{% if project.year %} · {{ project.year }}{% endif %}
+		</span>
+	</a>
+	{% endfor %}
+</div>

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<section class="project-deep">
+	<header>
+		<h2>{{ page.title }}</h2>
+		<p>{{ page.category }}{% if page.location %} · {{ page.location }}{% endif %}{% if page.year %} · {{ page.year }}{% endif %}</p>
+	</header>
+	<div class="content">
+		{% if page.cover_image %}
+		<span class="image main"><img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}" /></span>
+		{% endif %}
+
+		<ul class="project-meta">
+			{% if page.category %}<li><strong>Category</strong> {{ page.category }}</li>{% endif %}
+			{% if page.location %}<li><strong>Location</strong> {{ page.location }}</li>{% endif %}
+			{% if page.year %}<li><strong>Year</strong> {{ page.year }}</li>{% endif %}
+		</ul>
+
+		{{ content }}
+
+		{% if page.gallery_images %}
+		<section>
+			<header>
+				<h3>Project gallery</h3>
+				<p>Select an image to enlarge. Return to the <a href="{{ '/portfolio/' | relative_url }}">portfolio</a> for the full studio list.</p>
+			</header>
+			<div class="content">
+				<div class="gallery">
+					{% for image in page.gallery_images %}
+					<a href="{{ image | relative_url }}"{% if forloop.first %} class="landscape"{% endif %}><img src="{{ image | relative_url }}" alt="{{ page.title }} gallery image {{ forloop.index }}" /></a>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		{% endif %}
+
+		<ul class="actions">
+			<li><a href="{{ '/portfolio/' | relative_url }}" class="button">All projects</a></li>
+			<li><a href="{{ '/contact/' | relative_url }}" class="button primary">Start a conversation</a></li>
+		</ul>
+	</div>
+</section>

@@ -1,0 +1,54 @@
+# Haven Arch — Paradigm Shift (Jekyll) baseline
+# Theme: https://github.com/vrmiguel/paradigm-shift-jekyll-theme (HTML5 UP)
+
+title: Haven Arch
+author: Haven Arch
+description: Architecture & Interior Design Studio
+email: studio@havenarch.example
+phone: "+1 (000) 000-0000"
+address: 123 Studio Lane, Your City
+
+# GitHub Pages project site: https://havenarch.github.io/havenarch-website
+# For a custom domain or user site (havenarch.github.io), set baseurl to "".
+url: "https://havenarch.github.io"
+baseurl: "/havenarch-website"
+
+github_username: havenarch
+
+# Social — only profiles listed here appear in the footer
+instagram: https://www.instagram.com/havenarch
+linkedin: https://www.linkedin.com/company/havenarch
+github: https://github.com/havenarch
+
+# Contact form (Formspree or Web3Forms)
+# Formspree: https://formspree.io/f/YOUR_FORM_ID
+# Web3Forms: https://api.web3forms.com/submit  (add a hidden access_key field)
+form_endpoint: "https://formspree.io/f/xxxxxxxx"
+
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules

@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<section id="projects">
+	<header>
+		<h2>Selected work</h2>
+	</header>
+	<div class="content">
+		<p>A focused gallery of recent architecture and interior commissions. Each tile opens a full project page — not a lightbox-only preview.</p>
+		{% include project-gallery.html featured_only=true %}
+		<ul class="actions">
+			<li><a href="{{ '/portfolio/' | relative_url }}" class="button primary large">View full portfolio</a></li>
+			<li><a href="{{ '/about/' | relative_url }}" class="button large">About the studio</a></li>
+		</ul>
+	</div>
+</section>

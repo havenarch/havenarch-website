@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<section>
+	<header>
+		<h2>{{ page.title }}</h2>
+	</header>
+	<div class="content">
+		{{ content }}
+	</div>
+	{% if page.include_footer %}
+		{% include site-footer.html %}
+	{% endif %}
+</section>

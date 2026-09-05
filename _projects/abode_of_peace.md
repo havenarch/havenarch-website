@@ -1,6 +1,6 @@
 ---
 title: Abode Of Peace
-category: Apartments
+category: Villas
 location: Hyderabad, Telangana, India
 year: 2025
 featured: true

@@ -1,7 +1,7 @@
 ---
 title: Comfy Cove
 category: Interior
-location: Bengaluru
+location: Bhubaneswar, Odisha
 year: 2025
 featured: false
 cover_image: /images/projects/comfy_cove/cover.jpg
@@ -20,11 +20,17 @@ gallery_images:
   - /images/projects/comfy_cove/12.jpg
 ---
 
-Placeholder copy for **Comfy Cove**. Update this narrative with the project brief, design intent, and key spaces.
+400 sqft multipurpose hall designed to relax and chill
 
 ## Overview
 
-A short project summary belongs here — site context, client goals, and the overall design response.
+Designed this multipurpose room with the idea that one space can serve many purposes without compromising on style or comfort. From a serene reading corner to an entertainment zone, a home office, or a cozy family gathering space—every element was thoughtfully planned to make the room effortlessly versatile.
+
+The warm herringbone flooring, soft botanical wallpaper, clean custom cabinetry, ambient cove lighting, and a minimalist TV unit come together to create a timeless and inviting atmosphere. Large windows fill the room with natural light, while concealed storage keeps the space functional and clutter-free.
+
+
+
+I believe great design isn't just about aesthetics—it's about creating spaces that evolve with the people who use them.
 
 ## Design notes
 

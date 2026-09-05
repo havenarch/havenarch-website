@@ -1,8 +1,8 @@
 ---
 title: Ultra 54
-category: Interior
-location: Bengaluru
-year: 2025
+category: Architecture
+location: Bhubaneswar, Odisha
+year: 2026
 featured: true
 cover_image: /images/projects/ultra_54/cover.jpg
 gallery_images:
@@ -20,11 +20,19 @@ gallery_images:
   - /images/projects/ultra_54/12.jpg
 ---
 
-Placeholder copy for **Ultra 54**. Update this narrative with the project brief, design intent, and key spaces.
+A Villa Reimagined With Purpose
 
 ## Overview
 
-A short project summary belongs here — site context, client goals, and the overall design response.
+This villa renovation was about transforming an existing space into a home that feels brighter, more functional, and effortlessly elegant. Every corner was thoughtfully redesigned to meet the family's lifestyle while maintaining a timeless aesthetic.
+
+The interiors embrace a soft, neutral palette complemented by warm wood accents, subtle textures, and carefully layered lighting. The open kitchen with a custom breakfast counter creates a seamless connection between cooking and living spaces, making everyday moments more interactive and inviting.
+
+From the cozy living rooms with bespoke furniture to the clean architectural details and thoughtfully planned storage, every element was curated to balance comfort, practicality, and modern sophistication. Large windows invite natural light throughout the home, enhancing the sense of openness and warmth.
+
+For haven arch, renovation is more than updating finishes—it's about reimagining how a space can be lived in. This project reflects the power of thoughtful design to transform not just a house, but the everyday experience of the people who call it home.
+
+**A renovation that blends timeless design, modern functionality, and the warmth of everyday living.**
 
 ## Design notes
 

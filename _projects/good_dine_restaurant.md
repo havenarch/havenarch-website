@@ -1,7 +1,7 @@
 ---
 title: Good Dine Restaurant
 category: Interior
-location: Bengaluru
+location: Bhubaneswar, Odisha
 year: 2025
 featured: false
 cover_image: /images/projects/good_dine_restaurant/cover.jpg
@@ -22,11 +22,15 @@ gallery_images:
   - /images/projects/good_dine_restaurant/14.jpg
 ---
 
-Placeholder copy for **Good Dine Restaurant**. Update this narrative with the project brief, design intent, and key spaces.
+1500 sqft restaurant
 
 ## Overview
 
-A short project summary belongs here — site context, client goals, and the overall design response.
+This restaurant was envisioned as a space where comfort, elegance, and functionality come together effortlessly. The design embraces a warm, contemporary aesthetic with rich wooden finishes, handcrafted cane furniture, soft leather upholstery, and patterned flooring that creates a strong visual identity while guiding the flow through the space.
+
+Every design decision was made to enhance the dining experience - from the spacious booth seating and intimate table arrangements to the ambient lighting and thoughtfully detailed architectural columns. The neutral palette, layered textures, and clean lines create an atmosphere that feels both sophisticated and welcoming.
+
+Beyond aesthetics, the layout was carefully planned to ensure smooth circulation for guests and staff, maximizing seating capacity without compromising comfort. The result is a restaurant that is visually timeless, operationally efficient, and designed to leave a lasting impression.
 
 ## Design notes
 

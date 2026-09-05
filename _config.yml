@@ -14,10 +14,9 @@ baseurl: "/havenarch-website"
 
 github_username: havenarch
 
-# Social — only profiles listed here appear in the footer
-instagram: https://www.instagram.com/havenarch
-linkedin: https://www.linkedin.com/company/havenarch
-github: https://github.com/havenarch
+# Social — only profiles listed here appear in the contact footer
+instagram: https://www.instagram.com/havenarch_designs/
+linkedin: https://www.linkedin.com/in/swathi-kama-aa6139241/
 
 # Contact form — Google Forms
 google_form:

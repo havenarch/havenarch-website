@@ -1,0 +1,13 @@
+---
+layout: null
+permalink: /browserconfig.xml
+---
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square150x150logo src="{{ '/assets/favicons/android-chrome-192x192.png' | relative_url }}"/>
+      <TileColor>#f5f7f8</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>

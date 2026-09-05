@@ -4,10 +4,12 @@
 			<h3>Email</h3>
 			<a href="mailto:{{ site.email }}">{{ site.email }}</a>
 		</li>
+		{% if site.phone %}
 		<li>
 			<h3>Phone</h3>
 			<a href="https://api.whatsapp.com/send?phone={{ site.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{{ site.phone }}</a>
 		</li>
+		{% endif %}
 		<li>
 			<h3>Address</h3>
 			<span>{{ site.address }}</span>

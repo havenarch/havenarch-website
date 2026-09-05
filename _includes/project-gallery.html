@@ -2,14 +2,22 @@
 {% if include.featured_only %}
 	{% assign source = source | where: "featured", true %}
 {% endif %}
-<div class="gallery gallery-projects">
+<div class="project-grid">
 	{% for project in source %}
-	<a href="{{ project.url | relative_url }}"{% cycle ' class="landscape"', '', '' %} data-category="{{ project.category | downcase }}">
-		<img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}" />
-		<span class="caption">
-			<strong>{{ project.title }}</strong>
-			{{ project.category }}{% if project.year %} · {{ project.year }}{% endif %}
-		</span>
-	</a>
+	<article class="project-card" data-category="{{ project.category | downcase }}">
+		<a href="{{ project.url | relative_url }}" class="project-card-image">
+			<img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}" />
+		</a>
+		<div class="project-card-body">
+			<h3 class="project-card-title">
+				<a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+			</h3>
+			<p class="project-card-meta">{{ project.category }}{% if project.year %} · {{ project.year }}{% endif %}</p>
+			{% assign summary = project.description | default: project.excerpt %}
+			{% if summary != blank %}
+			<p class="project-card-summary">{{ summary | strip_html | normalize_whitespace }}</p>
+			{% endif %}
+		</div>
+	</article>
 	{% endfor %}
 </div>

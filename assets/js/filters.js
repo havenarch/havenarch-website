@@ -4,7 +4,7 @@
 		return;
 	}
 
-	var tiles = document.querySelectorAll(".gallery-projects [data-category]");
+	var tiles = document.querySelectorAll(".project-grid [data-category]");
 
 	bar.addEventListener("click", function (event) {
 		var button = event.target.closest("[data-filter]");

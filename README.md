@@ -16,6 +16,8 @@ Live URL after GitHub Pages is enabled: `https://havenarch.github.io/havenarch-w
 
 Projects live in `_projects/` as Markdown with front matter: `title`, `category`, `location`, `year`, `cover_image`, `gallery_images`, and optional `featured`.
 
+Project images live under `images/projects/<project-slug>/` — one folder per project with `cover.jpg` and numbered gallery files (`01.jpg`, `02.jpg`, …).
+
 ## 1. Local development
 
 Requirements: Ruby 3.x or newer (macOS system Ruby 2.6 is too old) and Bundler. On Apple Silicon:
@@ -71,7 +73,7 @@ Edit `_config.yml`:
 - `google_form` — Google Forms `action` URL and field `entries` (Name, Email, Project Type, Detail)
 - Social URLs (Instagram, LinkedIn, GitHub). Unused networks can be removed.
 
-Replace `images/logo.svg` with the studio mark. Gallery photographs currently use the theme demo images under `images/gallery/`.
+Replace `images/logo.svg` with the studio mark. Add project photos under `images/projects/<slug>/`. The home hero image is `images/site/hero.jpg`.
 
 ## License
 

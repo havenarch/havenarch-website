@@ -4,12 +4,12 @@ category: Architecture
 location: Coastal California
 year: 2024
 featured: true
-cover_image: /images/gallery/thumbs/01.jpg
+cover_image: /images/projects/modernist-villa/cover.jpg
 gallery_images:
-  - /images/gallery/fulls/01.jpg
-  - /images/gallery/fulls/02.jpg
-  - /images/gallery/fulls/03.jpg
-  - /images/gallery/fulls/04.jpg
+  - /images/projects/modernist-villa/01.jpg
+  - /images/projects/modernist-villa/02.jpg
+  - /images/projects/modernist-villa/03.jpg
+  - /images/projects/modernist-villa/04.jpg
 ---
 
 A hillside residence organized as a sequence of horizontal planes. Living volumes open to the horizon; private rooms step back into the slope.

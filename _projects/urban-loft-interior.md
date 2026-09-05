@@ -4,12 +4,12 @@ category: Interior
 location: Downtown loft district
 year: 2023
 featured: true
-cover_image: /images/gallery/thumbs/05.jpg
+cover_image: /images/projects/urban-loft-interior/cover.jpg
 gallery_images:
-  - /images/gallery/fulls/05.jpg
-  - /images/gallery/fulls/06.jpg
-  - /images/gallery/fulls/07.jpg
-  - /images/gallery/fulls/08.jpg
+  - /images/projects/urban-loft-interior/01.jpg
+  - /images/projects/urban-loft-interior/02.jpg
+  - /images/projects/urban-loft-interior/03.jpg
+  - /images/projects/urban-loft-interior/04.jpg
 ---
 
 An open industrial shell reworked as a calm interior: one long living volume, a precise kitchen wall, and a bedroom suite behind a timber screen.

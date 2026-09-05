@@ -19,10 +19,14 @@ instagram: https://www.instagram.com/havenarch
 linkedin: https://www.linkedin.com/company/havenarch
 github: https://github.com/havenarch
 
-# Contact form (Formspree or Web3Forms)
-# Formspree: https://formspree.io/f/YOUR_FORM_ID
-# Web3Forms: https://api.web3forms.com/submit  (add a hidden access_key field)
-form_endpoint: "https://formspree.io/f/xxxxxxxx"
+# Contact form — Google Forms
+google_form:
+  action: "https://docs.google.com/forms/d/14R3in1TLpU3GjNA84IeA50-wrE-RTqHd9vTL6ABpPos/formResponse"
+  entries:
+    name: "558657211"
+    email: "225218689"
+    project_type: "28198021"
+    detail: "615527930"
 
 permalink: pretty
 

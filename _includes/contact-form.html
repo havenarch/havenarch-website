@@ -1,16 +1,16 @@
-<form action="{{ site.form_endpoint }}" method="POST">
+<form id="contact-form" action="{{ site.google_form.action }}" method="POST" target="google-form-response">
 	<div class="fields">
 		<div class="field half">
 			<label for="name">Name</label>
-			<input type="text" name="name" id="name" placeholder="Your name" required />
+			<input type="text" name="entry.{{ site.google_form.entries.name }}" id="name" placeholder="Your name" required />
 		</div>
 		<div class="field half">
 			<label for="email">Email</label>
-			<input type="email" name="email" id="email" placeholder="you@example.com" required />
+			<input type="email" name="entry.{{ site.google_form.entries.email }}" id="email" placeholder="you@example.com" required />
 		</div>
 		<div class="field">
 			<label for="project-type">Project type</label>
-			<select name="project-type" id="project-type">
+			<select name="entry.{{ site.google_form.entries.project_type }}" id="project-type" required>
 				<option value="Architecture">Architecture</option>
 				<option value="Interior">Interior</option>
 				<option value="Commercial">Commercial</option>
@@ -18,13 +18,13 @@
 			</select>
 		</div>
 		<div class="field">
-			<label for="message">Message</label>
-			<textarea name="message" id="message" placeholder="Tell us about the site, brief, and timeline." rows="7" required></textarea>
+			<label for="message">Detail</label>
+			<textarea name="entry.{{ site.google_form.entries.detail }}" id="message" placeholder="Tell us about the site, brief, and timeline." rows="7" required></textarea>
 		</div>
 	</div>
-	<input type="hidden" name="_subject" value="Haven Arch — new inquiry" />
 	<ul class="actions">
 		<li><input type="submit" value="Send message" class="button primary" /></li>
 	</ul>
 </form>
-<p class="form-note">Replace <code>form_endpoint</code> in <code>_config.yml</code> with your Formspree form URL or Web3Forms endpoint. For Web3Forms, add a hidden <code>access_key</code> input to this include.</p>
+<iframe name="google-form-response" id="google-form-response" class="form-response-frame" title="Form submission" hidden></iframe>
+<p id="form-success" class="form-success" hidden>Thank you — your message was sent. We will be in touch soon.</p>

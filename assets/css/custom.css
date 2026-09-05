@@ -96,9 +96,13 @@
 	opacity: 0.7;
 }
 
-.form-note {
-	font-size: 0.85rem;
-	opacity: 0.75;
+.form-response-frame {
+	display: none;
+}
+
+.form-success {
+	margin-top: 1.25rem;
+	font-size: 0.95rem;
 }
 
 @media screen and (max-width: 1152px) {

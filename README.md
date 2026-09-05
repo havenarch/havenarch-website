@@ -11,7 +11,7 @@ Live URL after GitHub Pages is enabled: `https://havenarch.github.io/havenarch-w
 | `/` | Home — persistent sidebar branding and a highlighted projects grid. Tiles link to project pages (not modal-only). |
 | `/portfolio/` | Full archive with Architecture / Interior / Commercial filters. |
 | `/about/` | Studio philosophy, approach, and team. |
-| `/contact/` | Form posted to Formspree or Web3Forms (`form_endpoint` in `_config.yml`). |
+| `/contact/` | Form posted to Google Forms (`google_form` in `_config.yml`). |
 | `/projects/<name>/` | Project deep view (cover, meta, narrative, gallery). |
 
 Projects live in `_projects/` as Markdown with front matter: `title`, `category`, `location`, `year`, `cover_image`, `gallery_images`, and optional `featured`.
@@ -68,10 +68,8 @@ Edit `_config.yml`:
 - `title`, `description`, `email`, `phone`, `address`
 - `github_username`
 - `baseurl` — `/havenarch-website` for a project site, `""` for a custom domain
-- `form_endpoint` — Formspree (`https://formspree.io/f/YOUR_ID`) or Web3Forms (`https://api.web3forms.com/submit`)
+- `google_form` — Google Forms `action` URL and field `entries` (Name, Email, Project Type, Detail)
 - Social URLs (Instagram, LinkedIn, GitHub). Unused networks can be removed.
-
-For Web3Forms, add a hidden `access_key` field in `_includes/contact-form.html`.
 
 Replace `images/logo.svg` with the studio mark. Gallery photographs currently use the theme demo images under `images/gallery/`.
 

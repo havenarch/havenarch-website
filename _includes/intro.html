@@ -21,6 +21,24 @@
 		{% endif %}
 	</header>
 	<div class="content">
-		<span class="image fill" data-position="center"><img src="{{ '/images/site/hero.jpg' | relative_url }}" alt="Haven Arch studio work" /></span>
+		{% if page.layout == "home" %}
+			{% capture slideshow_images %}{% for project in site.projects %}{% if project.cover_image %}{{ project.cover_image | relative_url }}|{% endif %}{% if project.gallery_images %}{% for image in project.gallery_images %}{{ image | relative_url }}|{% endfor %}{% endif %}{% endfor %}{% endcapture %}
+			{% assign slideshow_urls = slideshow_images | split: "|" | compact %}
+			{% if slideshow_urls.size > 0 %}
+				<span class="image fill image-slideshow" data-position="center" data-shuffle="true" data-interval="4000" data-images="{{ slideshow_urls | join: '|' }}">
+					<img src="{{ slideshow_urls[0] }}" alt="{{ site.title }}" />
+				</span>
+			{% endif %}
+		{% elsif page.layout == "project" %}
+			{% capture slideshow_images %}{% if page.cover_image %}{{ page.cover_image | relative_url }}|{% endif %}{% if page.gallery_images %}{% for image in page.gallery_images %}{{ image | relative_url }}|{% endfor %}{% endif %}{% endcapture %}
+			{% assign slideshow_urls = slideshow_images | split: "|" | compact %}
+			{% if slideshow_urls.size > 0 %}
+				<span class="image fill image-slideshow" data-position="center" data-interval="4000" data-images="{{ slideshow_urls | join: '|' }}">
+					<img src="{{ slideshow_urls[0] }}" alt="{{ page.title }}" />
+				</span>
+			{% endif %}
+		{% else %}
+			<span class="image fill" data-position="center"><img src="{{ '/images/site/hero.jpg' | relative_url }}" alt="Haven Arch studio work" /></span>
+		{% endif %}
 	</div>
 </section>

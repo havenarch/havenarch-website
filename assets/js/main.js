@@ -44,7 +44,7 @@
 	// Polyfill: Object fit.
 		if (!browser.canUse('object-fit')) {
 
-			$('.image[data-position]').each(function() {
+			$('.image[data-position]').not('.image-slideshow').each(function() {
 
 				var $this = $(this),
 					$img = $this.children('img');
@@ -81,6 +81,127 @@
 			});
 
 		}
+
+	// Intro image slideshow (home + project pages).
+		$('.image-slideshow').each(function() {
+
+			var $container = $(this),
+				images = ($container.attr('data-images') || '').split('|').filter(Boolean),
+				interval = parseInt($container.attr('data-interval'), 10) || 4000,
+				duration = 2000,
+				alt = $container.children('img').attr('alt') || '',
+				index = 0,
+				timer,
+				transitioning = false,
+				$visible,
+				$hidden;
+
+			if (images.length < 2)
+				return;
+
+			if ($container.attr('data-shuffle') === 'true') {
+
+				for (var i = images.length - 1; i > 0; i--) {
+
+					var j = Math.floor(Math.random() * (i + 1)),
+						tmp = images[i];
+
+					images[i] = images[j];
+					images[j] = tmp;
+
+				}
+
+			}
+
+			function preload(src, callback) {
+
+				var img = new Image();
+
+				img.onload = img.onerror = function() {
+					if (callback)
+						callback();
+				};
+
+				img.src = src;
+
+			}
+
+			$container.empty();
+
+			$visible = $('<img class="slideshow-layer is-visible" />').attr('alt', alt).css('z-index', 2);
+			$hidden = $('<img class="slideshow-layer" />').attr('alt', alt).css('z-index', 1);
+
+			$container.append($visible, $hidden);
+
+			$visible.attr('src', images[0]);
+			preload(images[1]);
+
+			function showNext() {
+
+				var nextIndex, nextSrc;
+
+				if (transitioning)
+					return;
+
+				nextIndex = (index + 1) % images.length;
+				nextSrc = images[nextIndex];
+
+				preload(nextSrc, function() {
+
+					transitioning = true;
+
+					function startCrossfade() {
+
+						requestAnimationFrame(function() {
+
+							$hidden.css('z-index', 2).addClass('is-visible');
+							$visible.css('z-index', 1).removeClass('is-visible');
+
+							window.setTimeout(function() {
+
+								var tmp = $visible;
+
+								$visible = $hidden;
+								$hidden = tmp;
+								$hidden.removeClass('is-visible').css('z-index', 1);
+								$visible.css('z-index', 2);
+								index = nextIndex;
+								transitioning = false;
+
+								preload(images[(index + 1) % images.length]);
+
+							}, duration);
+
+						});
+
+					}
+
+					$hidden.attr('src', nextSrc);
+
+					if ($hidden[0].complete)
+						startCrossfade();
+					else
+						$hidden.one('load', startCrossfade);
+
+				});
+
+			}
+
+			timer = window.setInterval(showNext, interval);
+
+			$window.on('visibilitychange', function() {
+
+				if (document.hidden) {
+					window.clearInterval(timer);
+					timer = null;
+				}
+				else if (!timer) {
+					timer = window.setInterval(showNext, interval);
+				}
+
+			});
+
+		});
 
 	// Gallery.
 		$('.gallery').each(function() {

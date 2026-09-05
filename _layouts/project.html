@@ -7,10 +7,6 @@ layout: default
 		<p>{{ page.category }}{% if page.location %} · {{ page.location }}{% endif %}{% if page.year %} · {{ page.year }}{% endif %}</p>
 	</header>
 	<div class="content">
-		{% if page.cover_image %}
-		<span class="image main"><img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }}" /></span>
-		{% endif %}
-
 		<ul class="project-meta">
 			{% if page.category %}<li><strong>Category</strong> {{ page.category }}</li>{% endif %}
 			{% if page.location %}<li><strong>Location</strong> {{ page.location }}</li>{% endif %}

@@ -155,6 +155,59 @@
 	font-size: 0.95rem;
 }
 
+.gallery .modal .gallery-nav {
+	appearance: none;
+	-webkit-appearance: none;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 2rem;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	color: inherit;
+	cursor: pointer;
+	display: none;
+	height: 4.5rem;
+	outline: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 4.5rem;
+	z-index: 1;
+}
+
+.gallery .modal .gallery-nav.prev {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpolyline points='40,12 20,32 40,52' fill='none' stroke='%23000000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+	left: 0.35rem;
+}
+
+.gallery .modal .gallery-nav.next {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpolyline points='24,12 44,32 24,52' fill='none' stroke='%23000000' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+	right: 0.35rem;
+}
+
+.gallery .modal.has-nav .gallery-nav {
+	display: block;
+}
+
+.gallery .modal.has-nav .inner img {
+	max-width: 82vw;
+}
+
+@media screen and (max-width: 736px) {
+	.gallery .modal .gallery-nav {
+		height: 3.25rem;
+		width: 3.25rem;
+		background-size: 1.6rem;
+	}
+
+	.gallery .modal.has-nav .inner img {
+		max-width: 100vw;
+	}
+}
+
 @media screen and (max-width: 1152px) {
 	.brand {
 		justify-content: flex-start;

@@ -113,6 +113,40 @@
 				width: 4rem;
 			}
 
+			.gallery-nav {
+				@include vendor('appearance', 'none');
+				background-color: transparent;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 2rem;
+				border: 0;
+				border-radius: 0;
+				cursor: pointer;
+				display: none;
+				height: 4.5rem;
+				outline: 0;
+				padding: 0;
+				position: absolute;
+				top: 50%;
+				width: 4.5rem;
+				z-index: 1;
+				@include vendor('transform', 'translateY(-50%)');
+
+				&.prev {
+					background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><polyline points="40,12 20,32 40,52" fill="none" stroke="#{_palette(fg-bold)}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+					left: 0.35rem;
+				}
+
+				&.next {
+					background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><polyline points="24,12 44,32 24,52" fill="none" stroke="#{_palette(fg-bold)}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg>');
+					right: 0.35rem;
+				}
+			}
+
+			&.has-nav .gallery-nav {
+				display: block;
+			}
+
 			.inner {
 				@include vendor('transform', 'translateY(0.75rem)');
 				@include vendor('transition', (

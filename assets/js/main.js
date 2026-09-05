@@ -83,126 +83,160 @@
 		}
 
 	// Gallery.
-		$('.gallery')
-			.on('click', 'a', function(event) {
+		$('.gallery').each(function() {
 
+			var $gallery = $(this),
+				$modal,
+				$modalImg,
+				$links;
+
+			function imageLinks() {
+				return $gallery.children('a').filter(function() {
+					return ($(this).attr('href') || '').match(/\.(jpe?g|gif|png|webp|mp4)$/i);
+				});
+			}
+
+			function showAt(index) {
+				$links = imageLinks();
+
+				if ($links.length < 1)
+					return;
+
+				index = ((index % $links.length) + $links.length) % $links.length;
+				$modal[0]._index = index;
+
+				$modal.removeClass('loaded');
+				$modalImg.attr('src', $links.eq(index).attr('href'));
+				$modal.addClass('visible');
+				$modal.toggleClass('has-nav', $links.length > 1);
+				$modal.focus();
+
+				if ($modalImg[0].complete)
+					$modal.addClass('loaded');
+			}
+
+			function hide() {
+				if ($modal[0]._locked || !$modal.hasClass('visible'))
+					return;
+
+				$modal[0]._locked = true;
+				$modal.removeClass('loaded');
+
+				setTimeout(function() {
+					$modal.removeClass('visible has-nav');
+
+					setTimeout(function() {
+						$modalImg.attr('src', '');
+						$modal[0]._locked = false;
+						$body.focus();
+					}, 475);
+				}, 125);
+			}
+
+			function step(delta) {
+				$links = imageLinks();
+
+				if (!$modal.hasClass('visible') || $links.length < 2)
+					return;
+
+				showAt(($modal[0]._index || 0) + delta);
+			}
+
+			$gallery.prepend(
+				'<div class="modal" tabIndex="-1">' +
+					'<button type="button" class="gallery-nav prev" aria-label="Previous image"></button>' +
+					'<div class="inner"><img src="" alt="" /></div>' +
+					'<button type="button" class="gallery-nav next" aria-label="Next image"></button>' +
+				'</div>'
+			);
+
+			$modal = $gallery.children('.modal');
+			$modalImg = $modal.find('.inner img');
+			$modal[0]._index = 0;
+
+			$gallery.on('click', 'a', function(event) {
 				var $a = $(this),
-					$gallery = $a.parents('.gallery'),
-					$modal = $gallery.children('.modal'),
-					$modalImg = $modal.find('img'),
 					href = $a.attr('href');
 
-				// Not an image? Bail.
-					if (!href.match(/\.(jpg|gif|png|mp4)$/))
-						return;
+				if (!href || !href.match(/\.(jpe?g|gif|png|webp|mp4)$/i))
+					return;
 
-				// Prevent default.
+				event.preventDefault();
+				event.stopPropagation();
+
+				$links = imageLinks();
+				showAt($links.index($a));
+			});
+
+			$modal.on('click', function(event) {
+				if ($(event.target).closest('.gallery-nav, .inner').length)
+					return;
+
+				event.stopPropagation();
+				hide();
+			});
+
+			$modal.on('click', '.gallery-nav.prev', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				step(-1);
+			});
+
+			$modal.on('click', '.gallery-nav.next', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				step(1);
+			});
+
+			$window.on('keydown', function(event) {
+				if (!$modal.hasClass('visible'))
+					return;
+
+				if (event.key === 'Escape' || event.keyCode === 27) {
 					event.preventDefault();
-					event.stopPropagation();
+					hide();
+				}
+				else if (event.key === 'ArrowLeft' || event.keyCode === 37) {
+					event.preventDefault();
+					step(-1);
+				}
+				else if (event.key === 'ArrowRight' || event.keyCode === 39) {
+					event.preventDefault();
+					step(1);
+				}
+			});
 
-				// Locked? Bail.
-					if ($modal[0]._locked)
-						return;
+			$modal.on('mouseup mousedown mousemove', function(event) {
+				event.stopPropagation();
+			});
 
-				// Lock.
-					$modal[0]._locked = true;
+			$modal.on('touchstart', function(event) {
+				var touch = event.originalEvent.changedTouches[0];
+				$modal[0]._swipeX = touch ? touch.screenX : null;
+			});
 
-				// Set src.
-					$modalImg.attr('src', href);
+			$modal.on('touchend', function(event) {
+				var startX = $modal[0]._swipeX,
+					touch = event.originalEvent.changedTouches[0];
 
-				// Set visible.
-					$modal.addClass('visible');
+				if (startX == null || !touch)
+					return;
 
-				// Focus.
-					$modal.focus();
+				var dx = touch.screenX - startX;
 
-				// Delay.
-					setTimeout(function() {
+				if (Math.abs(dx) > 50)
+					step(dx > 0 ? -1 : 1);
 
-						// Unlock.
-							$modal[0]._locked = false;
+				$modal[0]._swipeX = null;
+			});
 
-					}, 600);
+			$modalImg.on('load', function() {
+				setTimeout(function() {
+					if ($modal.hasClass('visible'))
+						$modal.addClass('loaded');
+				}, 175);
+			});
 
-			})
-			.on('click', '.modal', function(event) {
-
-				var $modal = $(this),
-					$modalImg = $modal.find('img');
-
-				// Locked? Bail.
-					if ($modal[0]._locked)
-						return;
-
-				// Already hidden? Bail.
-					if (!$modal.hasClass('visible'))
-						return;
-
-				// Stop propagation.
-					event.stopPropagation();
-
-				// Lock.
-					$modal[0]._locked = true;
-
-				// Clear visible, loaded.
-					$modal
-						.removeClass('loaded')
-
-				// Delay.
-					setTimeout(function() {
-
-						$modal
-							.removeClass('visible')
-
-						setTimeout(function() {
-
-							// Clear src.
-								$modalImg.attr('src', '');
-
-							// Unlock.
-								$modal[0]._locked = false;
-
-							// Focus.
-								$body.focus();
-
-						}, 475);
-
-					}, 125);
-
-			})
-			.on('keypress', '.modal', function(event) {
-
-				var $modal = $(this);
-
-				// Escape? Hide modal.
-					if (event.keyCode == 27)
-						$modal.trigger('click');
-
-			})
-			.on('mouseup mousedown mousemove', '.modal', function(event) {
-
-				// Stop propagation.
-					event.stopPropagation();
-
-			})
-			.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
-				.find('img')
-					.on('load', function(event) {
-
-						var $modalImg = $(this),
-							$modal = $modalImg.parents('.modal');
-
-						setTimeout(function() {
-
-							// No longer visible? Bail.
-								if (!$modal.hasClass('visible'))
-									return;
-
-							// Set loaded.
-								$modal.addClass('loaded');
-
-						}, 275);
-
-					});
+		});
 
 })(jQuery);

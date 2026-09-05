@@ -1,5 +1,5 @@
 ---
 layout: home
-title: Haven Arch
+title: Haven Arch Designs
 permalink: /
 ---

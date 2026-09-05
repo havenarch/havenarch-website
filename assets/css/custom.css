@@ -1,5 +1,15 @@
 /* Haven Arch — layout additions on top of Paradigm Shift */
 
+#wrapper:before {
+	background-color: #f5f7f8 !important;
+}
+
+@media screen and (max-width: 1152px) {
+	#wrapper > section > header {
+		background-color: #f5f7f8 !important;
+	}
+}
+
 .image-slideshow {
 	overflow: hidden;
 }
@@ -20,29 +30,50 @@
 	opacity: 1;
 }
 
-.brand {
+.site-identity {
+	--title-stack-gap: 0.65rem;
 	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	gap: 0.85rem;
-	border-bottom: 0;
+	flex-direction: column;
+	align-items: flex-end;
 	margin-bottom: 1.25rem;
+}
+
+.brand {
+	display: block;
+	border-bottom: 0;
 	color: inherit;
 }
 
 .brand-logo {
-	width: 3.5rem;
-	height: 3.5rem;
+	width: auto;
+	height: 4.5rem;
 	display: block;
 	background: transparent;
 }
 
-.brand-mark {
-	font-family: "Raleway", sans-serif;
-	font-size: 0.7rem;
-	font-weight: 800;
-	letter-spacing: 0.25rem;
-	text-transform: uppercase;
+.site-title {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: var(--title-stack-gap);
+	font-size: 3.5rem;
+	line-height: 1.1;
+	margin: 0;
+}
+
+#wrapper > section.intro > header .site-title {
+	margin-top: var(--title-stack-gap) !important;
+	margin-bottom: 0 !important;
+}
+
+.site-title-line {
+	display: block;
+	white-space: nowrap;
+}
+
+#wrapper > section.intro > header > .site-identity {
+	width: auto;
+	max-width: 20rem;
 }
 
 .site-nav ul {
@@ -73,6 +104,56 @@
 	flex-wrap: wrap;
 	gap: 0.6rem;
 	margin: 0 0 1.75rem 0;
+}
+
+.filter-bar .button:hover,
+.filter-bar .button:focus,
+.filter-bar .button:active,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+button:active,
+.button:active {
+	box-shadow: inset 0 0 0 2px #d4a08a !important;
+	color: #d4a08a !important;
+}
+
+input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary {
+	background-color: #f2c4b1 !important;
+	box-shadow: none !important;
+	color: #000000 !important;
+}
+
+input[type="submit"].primary:hover,
+input[type="reset"].primary:hover,
+input[type="button"].primary:hover,
+button.primary:hover,
+.button.primary:hover,
+.filter-bar .button.primary:hover,
+.filter-bar .button.primary:focus {
+	background-color: #f8ddd0 !important;
+	box-shadow: none !important;
+	color: #000000 !important;
+}
+
+input[type="submit"].primary:active,
+input[type="reset"].primary:active,
+input[type="button"].primary:active,
+button.primary:active,
+.button.primary:active,
+.filter-bar .button.primary:active {
+	background-color: #e8b098 !important;
+	box-shadow: none !important;
+	color: #000000 !important;
 }
 
 .project-grid {
@@ -229,7 +310,8 @@
 }
 
 @media screen and (max-width: 1152px) {
-	.brand {
-		justify-content: flex-start;
+	.site-identity,
+	.site-title {
+		align-items: flex-start;
 	}
 }

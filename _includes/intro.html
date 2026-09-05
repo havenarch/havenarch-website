@@ -1,10 +1,14 @@
 <section class="intro">
 	<header>
-		<a class="brand" href="{{ '/' | relative_url }}">
-			<img class="brand-logo" src="{{ '/images/logo.svg' | relative_url }}" alt="{{ site.title }} logo" width="56" height="56" />
-			<span class="brand-mark">Studio</span>
-		</a>
-		<h1>{{ site.title }}</h1>
+		<div class="site-identity">
+			<a class="brand" href="{{ '/' | relative_url }}">
+				<img class="brand-logo" src="{{ '/images/logo.png' | relative_url }}" alt="Haven Arch Designs logo" height="72" />
+			</a>
+			<h1 class="site-title">
+				<span class="site-title-line">Haven&nbsp;Arch</span>
+				<span class="site-title-line">Designs</span>
+			</h1>
+		</div>
 		<p>{{ site.description }}</p>
 		<nav class="site-nav" aria-label="Primary">
 			<ul>
@@ -21,12 +25,12 @@
 		{% endif %}
 	</header>
 	<div class="content">
-		{% if page.layout == "home" %}
+		{% if page.layout == "home" or page.url contains '/portfolio' %}
 			{% capture slideshow_images %}{% for project in site.projects %}{% if project.cover_image %}{{ project.cover_image | relative_url }}|{% endif %}{% if project.gallery_images %}{% for image in project.gallery_images %}{{ image | relative_url }}|{% endfor %}{% endif %}{% endfor %}{% endcapture %}
 			{% assign slideshow_urls = slideshow_images | split: "|" | compact %}
 			{% if slideshow_urls.size > 0 %}
 				<span class="image fill image-slideshow" data-position="center" data-shuffle="true" data-interval="4000" data-images="{{ slideshow_urls | join: '|' }}">
-					<img src="{{ slideshow_urls[0] }}" alt="{{ site.title }}" />
+					<img src="{{ slideshow_urls[0] }}" alt="Haven Arch Designs" />
 				</span>
 			{% endif %}
 		{% elsif page.layout == "project" %}
@@ -38,7 +42,13 @@
 				</span>
 			{% endif %}
 		{% else %}
-			<span class="image fill" data-position="center"><img src="{{ '/images/site/hero.jpg' | relative_url }}" alt="Haven Arch studio work" /></span>
+			{% capture slideshow_images %}{% for project in site.projects %}{% if project.featured and project.cover_image %}{{ project.cover_image | relative_url }}|{% endif %}{% endfor %}{% endcapture %}
+			{% assign slideshow_urls = slideshow_images | split: "|" | compact %}
+			{% if slideshow_urls.size > 0 %}
+				<span class="image fill image-slideshow" data-position="center" data-shuffle="true" data-interval="4000" data-images="{{ slideshow_urls | join: '|' }}">
+					<img src="{{ slideshow_urls[0] }}" alt="Haven Arch Designs" />
+				</span>
+			{% endif %}
 		{% endif %}
 	</div>
 </section>

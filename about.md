@@ -5,15 +5,16 @@ permalink: /about/
 description: Studio philosophy, team, and design approach at Haven Arch.
 ---
 
-<p><strong>Haven Arch</strong> is an architecture and interior design studio. We shape calm, well-built rooms and buildings — places that hold daily life with clarity, material honesty, and a quiet sense of refuge.</p>
+<p>Established in 2024, by the Principal Architect, K.V. Swathi. At Haven Arch Designs, we believe that every space has the potential to become a sanctuary - an extension of the people who inhabit it. Based in the vibrant city of Bangalore, our studio is driven by the idea of creating architecture and interiors that feel like a gateway to your safe place.</p>
+
+<p>We don't just design spaces - we craft experiences. Every project begins with a deep understanding of our client's vision, lifestyle, and aspirations. With a thoughtful blend of functionality, aesthetics, and emotion, we translate that vision into spaces that are personal, purposeful, and deeply livable.</p>
 
 <section>
 	<header>
 		<h3>Philosophy</h3>
-		<p>Design should feel inevitable: proportion, light, and sequence doing the work before decoration arrives.</p>
 	</header>
 	<div class="content">
-		<p>We begin with site and brief, then reduce until structure, circulation, and atmosphere agree. Interiors are treated as architecture at arm’s length — millwork, light, and surface as one composition, not a layer applied after the fact.</p>
+		<p>We begin with site and brief, then reduce until structure, circulation, and atmosphere agree. Interiors are treated as architecture at arm's length — millwork, light, and surface as one composition, not a layer applied after the fact.</p>
 	</div>
 </section>
 

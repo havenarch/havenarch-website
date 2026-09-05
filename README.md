@@ -9,7 +9,7 @@ Live URL after GitHub Pages is enabled: `https://havenarch.github.io/havenarch-w
 | Path | Purpose |
 | --- | --- |
 | `/` | Home — persistent sidebar branding and a highlighted projects grid. Tiles link to project pages (not modal-only). |
-| `/portfolio/` | Full archive with Architecture / Interior / Commercial filters. |
+| `/portfolio/` | Full archive with Apartments / Villas / Commercial filters. |
 | `/about/` | Studio philosophy, approach, and team. |
 | `/contact/` | Form posted to Google Forms (`google_form` in `_config.yml`). |
 | `/projects/<name>/` | Project deep view (cover, meta, narrative, gallery). |

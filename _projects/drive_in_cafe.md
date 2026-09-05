@@ -1,6 +1,6 @@
 ---
 title: Drive In Cafe
-category: Interior
+category: Commercial
 location: Bhubaneswar, Odisha
 year: 2026
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: Ultra 54
-category: Architecture
+category: Villas
 location: Bhubaneswar, Odisha
 year: 2026
 featured: true

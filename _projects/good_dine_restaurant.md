@@ -1,6 +1,6 @@
 ---
 title: Good Dine Restaurant
-category: Interior
+category: Commercial
 location: Bhubaneswar, Odisha
 year: 2025
 featured: false

@@ -1,6 +1,6 @@
 ---
 title: Comfy Cove
-category: Interior
+category: Apartments
 location: Bhubaneswar, Odisha
 year: 2025
 featured: false

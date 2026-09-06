@@ -1,10 +1,10 @@
 ---
 title: Abode of Peace
-category: Villas
+category: Apartments
 location: Hyderabad, Telangana, India
 year: 2025
 featured: true
-description: A 2,500 sq ft villa renovation in Hyderabad designed for comfort, functionality, and calm interiors by Haven Arch Designs.
+description: A 2,500 sq ft apartment renovation in Hyderabad designed for comfort, functionality, and calm interiors by Haven Arch Designs.
 cover_image: /images/projects/abode_of_peace/cover.jpg
 gallery_images:
   - /images/projects/abode_of_peace/01.jpg
@@ -24,11 +24,11 @@ gallery_images:
   - /images/projects/abode_of_peace/15.png
 ---
 
-A 2,500 sq ft villa designed for comfort and functionality.
+A 2,500 sq ft apartment designed for comfort and functionality.
 
 ### Overview
 
-This complete renovation transforms a 2,500 sq ft home into a modern, bespoke residence tailored to the client's aesthetic and functional needs.
+This complete renovation transforms a 2,500 sq ft apartment into a modern, bespoke home tailored to the client's aesthetic and functional needs.
 
 The journey begins at the long entrance corridor, revitalized to set a welcoming, dynamic tone. A wooden veneer ceiling pattern adds warmth and architectural interest overhead, while walls are kept bright white at eye level to enhance openness.
 

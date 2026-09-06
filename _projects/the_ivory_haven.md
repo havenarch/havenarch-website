@@ -1,6 +1,6 @@
 ---
 title: The Ivory Haven
-category: Apartments
+category: Villas
 location: Bhubaneswar, Odisha, India
 year: 2025
 featured: false

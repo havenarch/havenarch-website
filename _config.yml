@@ -19,10 +19,12 @@ twitter:
 
 google_analytics: G-C1HQ5KX0P3
 
-# GitHub Pages project site: https://havenarch.github.io/havenarch-website
-# For a custom domain or user site (havenarch.github.io), set baseurl to "".
-url: "https://havenarch.github.io"
-baseurl: "/havenarch-website"
+# Custom domain: https://havenarch.co
+url: "https://havenarch.co"
+baseurl: ""
+
+include:
+  - CNAME
 
 github_username: havenarch
 

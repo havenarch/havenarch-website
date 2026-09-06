@@ -1,34 +1,41 @@
 ---
 layout: default
 ---
-<section class="project-deep">
+<main id="main-content">
+<section class="project-deep" aria-labelledby="project-heading">
 	<header>
-		<h2>{{ page.title }}</h2>
+		<h2 id="project-heading">{{ page.title }}</h2>
 		<p>{{ page.category }}{% if page.location %} · {{ page.location }}{% endif %}{% if page.year %} · {{ page.year }}{% endif %}</p>
 	</header>
 	<div class="content">
+		{% if page.cover_image %}
+		<figure class="image main">
+			<img src="{{ page.cover_image | relative_url }}" alt="{{ page.title }} — {{ page.category | downcase }} project{% if page.location %} in {{ page.location }}{% endif %}" />
+		</figure>
+		{% endif %}
+
 		<ul class="project-meta">
 			{% if page.category %}<li><strong>Category</strong> {{ page.category }}</li>{% endif %}
 			{% if page.location %}<li><strong>Location</strong> {{ page.location }}</li>{% endif %}
 			{% if page.year %}<li><strong>Year</strong> {{ page.year }}</li>{% endif %}
 		</ul>
 
-		{{ content }}
+		<article class="project-body">
+			{{ content }}
+		</article>
 
 		{% if page.gallery_images %}
-		<section>
+		<div class="project-gallery-block">
 			<header>
-				<h3>Project gallery</h3>
-				<p>Select an image to enlarge, then use the arrows (or your keyboard) to browse. Return to the <a href="{{ '/portfolio/' | relative_url }}">portfolio</a> for the full studio list.</p>
+				<h3 id="project-gallery-heading">Project gallery</h3>
+				<p>Select an image to enlarge, then use the arrows or keyboard to browse. Return to the <a href="{{ '/portfolio/' | relative_url }}">portfolio</a> for the full project list.</p>
 			</header>
-			<div class="content">
-				<div class="gallery">
-					{% for image in page.gallery_images %}
-					<a href="{{ image | relative_url }}"{% if forloop.first %} class="landscape"{% endif %}><img src="{{ image | relative_url }}" alt="{{ page.title }} gallery image {{ forloop.index }}" /></a>
-					{% endfor %}
-				</div>
+			<div class="gallery">
+				{% for image in page.gallery_images %}
+				<a href="{{ image | relative_url }}"{% if forloop.first %} class="landscape"{% endif %}><img src="{{ image | relative_url }}" alt="{{ page.title }} — project photograph {{ forloop.index }}" /></a>
+				{% endfor %}
 			</div>
-		</section>
+		</div>
 		{% endif %}
 
 		<ul class="actions">
@@ -37,3 +44,4 @@ layout: default
 		</ul>
 	</div>
 </section>
+</main>

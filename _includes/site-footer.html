@@ -7,7 +7,7 @@
 		{% if site.phone %}
 		<li>
 			<h3>Phone</h3>
-			<a href="https://api.whatsapp.com/send?phone={{ site.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}">{{ site.phone }}</a>
+			<a href="https://api.whatsapp.com/send?phone={{ site.phone | replace: ' ', '' | replace: '(', '' | replace: ')', '' | replace: '-', '' }}" rel="noopener noreferrer" target="_blank">{{ site.phone }}</a>
 		</li>
 		{% endif %}
 		<li>
@@ -18,16 +18,16 @@
 			<h3>Elsewhere</h3>
 			<ul class="icons">
 				{% if site.twitter %}
-				<li><a href="{{ site.twitter }}" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="{{ site.twitter }}" class="icon brands fa-twitter" rel="noopener noreferrer" target="_blank"><span class="label">Twitter</span></a></li>
 				{% endif %}
 				{% if site.facebook %}
-				<li><a href="{{ site.facebook }}" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="{{ site.facebook }}" class="icon brands fa-facebook-f" rel="noopener noreferrer" target="_blank"><span class="label">Facebook</span></a></li>
 				{% endif %}
 				{% if site.instagram %}
-				<li><a href="{{ site.instagram }}" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="{{ site.instagram }}" class="icon brands fa-instagram" rel="noopener noreferrer" target="_blank"><span class="label">Instagram</span></a></li>
 				{% endif %}
 				{% if site.linkedin %}
-				<li><a href="{{ site.linkedin }}" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+				<li><a href="{{ site.linkedin }}" class="icon brands fa-linkedin-in" rel="noopener noreferrer" target="_blank"><span class="label">LinkedIn</span></a></li>
 				{% endif %}
 			</ul>
 		</li>

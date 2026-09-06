@@ -1,5 +1,9 @@
 /* Haven Arch — layout additions on top of Paradigm Shift */
 
+#wrapper > main {
+	display: contents;
+}
+
 #wrapper:before {
 	background-color: #f5f7f8 !important;
 }
@@ -257,6 +261,31 @@ button.primary:active,
 	letter-spacing: 0.16rem;
 	text-transform: uppercase;
 	opacity: 0.7;
+}
+
+.project-gallery-block {
+	margin-top: 3rem;
+	position: relative;
+	left: auto;
+	width: 100%;
+}
+
+.project-gallery-block > header {
+	margin-bottom: 1.5rem;
+}
+
+.project-gallery-block > header h3 {
+	margin-bottom: 0.75rem;
+}
+
+@media screen and (max-width: 736px) {
+	.project-gallery-block {
+		overflow-x: clip;
+	}
+
+	.project-gallery-block .gallery a {
+		min-height: 12rem;
+	}
 }
 
 .form-response-frame {

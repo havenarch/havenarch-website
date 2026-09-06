@@ -1,9 +1,10 @@
 ---
-title: Abode Of Peace
+title: Abode of Peace
 category: Villas
 location: Hyderabad, Telangana, India
 year: 2025
 featured: true
+description: A 2,500 sq ft villa renovation in Hyderabad designed for comfort, functionality, and calm interiors by Haven Arch Designs.
 cover_image: /images/projects/abode_of_peace/cover.jpg
 gallery_images:
   - /images/projects/abode_of_peace/01.jpg
@@ -23,22 +24,14 @@ gallery_images:
   - /images/projects/abode_of_peace/15.png
 ---
 
-2500 sq ft villa is built for comfort and functionality
+A 2,500 sq ft villa designed for comfort and functionality.
 
-## Overview
+### Overview
 
-This complete renovation transforms a 2,500 sq ft apartment into a modern, bespoke home tailored precisely to the client's fresh aesthetic and functional needs.
+This complete renovation transforms a 2,500 sq ft home into a modern, bespoke residence tailored to the client's aesthetic and functional needs.
 
-The journey begins at the long entrance corridor, which has been revitalized to set a welcoming, dynamic tone. A stunning wooden veneer pattern ceiling adds warmth and architectural interest overhead, while the walls are kept a bright white at eye level to enhance the feeling of openness and space.
+The journey begins at the long entrance corridor, revitalized to set a welcoming, dynamic tone. A wooden veneer ceiling pattern adds warmth and architectural interest overhead, while walls are kept bright white at eye level to enhance openness.
 
-The kitchen has been reimagined for both style and utility. It features a contemporary design with elegant mauve and cream acrylic shutters, providing a sleek, reflective finish. Crucially, the design maximizes every inch to create abundant storage space, fulfilling the client’s practical requirements for a highly functional, modern cooking area.
+The kitchen has been reimagined for both style and utility. It features a contemporary design with elegant mauve and cream acrylic shutters, providing a sleek, reflective finish. The layout maximizes every inch to create abundant storage, fulfilling the client's requirements for a highly functional, modern cooking area.
 
-The focus on light, open space extends to the private areas. The washrooms have been designed in a lighter, open tone with the strategic use of light wood textures. This emphasis on elegant utility extends to the private bedrooms. These retreats are designed in calming neutral palettes, maximizing tranquility. 
-
-## Design notes
-
-- Add material and lighting notes
-- Describe circulation and key rooms
-- Include scope, area, or timeline if relevant
-
-*Replace this placeholder text and refine categories, location, and year in the front matter.*
+The focus on light and open space extends to the private areas. Washrooms are designed in a lighter tone with strategic use of light wood textures. Bedrooms are calm retreats in neutral palettes, maximizing tranquility.

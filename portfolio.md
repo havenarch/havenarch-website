@@ -2,10 +2,10 @@
 layout: page
 title: Portfolio
 permalink: /portfolio/
-description: Apartments, villas, and commercial work by Haven Arch.
+description: Explore apartments, villas, and commercial architecture and interior design projects by Haven Arch Designs across India.
 ---
 
-<p>Filter the studio archive by practice area. Each tile opens a dedicated project page with narrative, credits, and a full-size gallery.</p>
+<p>Filter the studio archive by practice area. Each project opens a dedicated page with narrative, project details, and a full-size gallery.</p>
 
 <div class="filter-bar" data-filter-bar>
 	<button type="button" class="button small primary" data-filter="all">All</button>

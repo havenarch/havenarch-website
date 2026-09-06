@@ -6,7 +6,7 @@
 	{% for project in source %}
 	<article class="project-card" data-category="{{ project.category | downcase }}">
 		<a href="{{ project.url | relative_url }}" class="project-card-image">
-			<img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }}" />
+			<img src="{{ project.cover_image | relative_url }}" alt="{{ project.title }} — {{ project.category | downcase }} project{% if project.location %} in {{ project.location }}{% endif %}" />
 		</a>
 		<div class="project-card-body">
 			<h3 class="project-card-title">

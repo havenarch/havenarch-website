@@ -30,7 +30,7 @@
 			{% assign slideshow_urls = slideshow_images | split: "|" | compact %}
 			{% if slideshow_urls.size > 0 %}
 				<span class="image fill image-slideshow" data-position="center" data-shuffle="true" data-interval="4000" data-images="{{ slideshow_urls | join: '|' }}">
-					<img src="{{ slideshow_urls[0] }}" alt="Haven Arch Designs" />
+					<img src="{{ slideshow_urls[0] }}" alt="Haven Arch Designs architecture and interior design portfolio" />
 				</span>
 			{% endif %}
 		{% elsif page.layout == "project" %}
@@ -38,7 +38,7 @@
 			{% assign slideshow_urls = slideshow_images | split: "|" | compact %}
 			{% if slideshow_urls.size > 0 %}
 				<span class="image fill image-slideshow" data-position="center" data-interval="4000" data-images="{{ slideshow_urls | join: '|' }}">
-					<img src="{{ slideshow_urls[0] }}" alt="{{ page.title }}" />
+					<img src="{{ slideshow_urls[0] }}" alt="{{ page.title }} — {{ page.category | downcase }} interior design by Haven Arch Designs" />
 				</span>
 			{% endif %}
 		{% else %}
@@ -46,7 +46,7 @@
 			{% assign slideshow_urls = slideshow_images | split: "|" | compact %}
 			{% if slideshow_urls.size > 0 %}
 				<span class="image fill image-slideshow" data-position="center" data-shuffle="true" data-interval="4000" data-images="{{ slideshow_urls | join: '|' }}">
-					<img src="{{ slideshow_urls[0] }}" alt="Haven Arch Designs" />
+					<img src="{{ slideshow_urls[0] }}" alt="Haven Arch Designs architecture and interior design portfolio" />
 				</span>
 			{% endif %}
 		{% endif %}

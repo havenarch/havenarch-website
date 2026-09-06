@@ -4,6 +4,7 @@ category: Apartments
 location: Bhubaneswar, Odisha, India
 year: 2025
 featured: false
+description: A 4,000 sq ft custom villa interior in Bhubaneswar designed for legacy, luxury entertaining, and everyday warmth.
 cover_image: /images/projects/the_ivory_haven/cover.jpg
 gallery_images:
   - /images/projects/the_ivory_haven/01.jpg
@@ -46,22 +47,14 @@ gallery_images:
   - /images/projects/the_ivory_haven/38.jpg
 ---
 
-4000 sq ft villa is built for legacy and luxury entertaining
+A 4,000 sq ft villa built for legacy and luxury entertaining.
 
-## Overview
+### Overview
 
-This custom-designed, 4,000 sq ft 3 BHK villa is a testament to timeless elegance, crafted for a social couple and their parents. Reflecting the couple's vibrant and welcoming personality, the home is a perfect blend of classic design and warm, earthy textures.
+This custom-designed 4,000 sq ft, three-bedroom villa is a testament to timeless elegance, crafted for a social couple and their parents. Reflecting the couple's vibrant and welcoming personality, the home blends classic design with warm, earthy textures.
 
-The main common areas feature a sophisticated Victorian-themed design, embracing a palette rich in cream textures and natural wood, creating an atmosphere of grand yet inviting formality. The layout includes three bedrooms, four bathrooms and a versatile dedicated multipurpose hall that seamlessly opens onto a spacious terrace—ideal for large gatherings and entertaining friends and family.
+The main common areas feature a sophisticated Victorian-inspired design, with a palette rich in cream textures and natural wood, creating an atmosphere of grand yet inviting formality. The layout includes three bedrooms, four bathrooms, and a versatile multipurpose hall that opens onto a spacious terrace—ideal for large gatherings and entertaining friends and family.
 
 In contrast, the family lounge offers a cozy, intimate retreat. Here, the design shifts to a more rustic, comfortable feel, highlighting the beauty of teak, sheesham wood, and cane finishes.
 
-The home's crowning jewel is the open-air terrace. Designed as a cozy escape, it features a cherished swing, offering a serene spot to enjoy a cup of tea and the tranquility of nature, fulfilling the family's desire for an open, peaceful haven.
-
-## Design notes
-
-- Add material and lighting notes
-- Describe circulation and key rooms
-- Include scope, area, or timeline if relevant
-
-*Replace this placeholder text and refine categories, location, and year in the front matter.*
+The home's crowning jewel is the open-air terrace. Designed as a cozy escape, it features a cherished swing—a serene spot to enjoy a cup of tea and the tranquility of nature, fulfilling the family's desire for an open, peaceful haven.

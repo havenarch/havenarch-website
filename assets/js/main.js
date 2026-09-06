@@ -309,24 +309,6 @@
 				step(1);
 			});
 
-			$window.on('keydown', function(event) {
-				if (!$modal.hasClass('visible'))
-					return;
-
-				if (event.key === 'Escape' || event.keyCode === 27) {
-					event.preventDefault();
-					hide();
-				}
-				else if (event.key === 'ArrowLeft' || event.keyCode === 37) {
-					event.preventDefault();
-					step(-1);
-				}
-				else if (event.key === 'ArrowRight' || event.keyCode === 39) {
-					event.preventDefault();
-					step(1);
-				}
-			});
-
 			$modal.on('mouseup mousedown mousemove', function(event) {
 				event.stopPropagation();
 			});
@@ -358,6 +340,36 @@
 				}, 175);
 			});
 
+			$gallery.data('galleryInstance', {
+				hide: hide,
+				step: step
+			});
+
+		});
+
+		$window.on('keydown', function(event) {
+			var $activeModal = $('.gallery .modal.visible').first();
+
+			if ($activeModal.length < 1)
+				return;
+
+			var instance = $activeModal.parent('.gallery').data('galleryInstance');
+
+			if (!instance)
+				return;
+
+			if (event.key === 'Escape' || event.keyCode === 27) {
+				event.preventDefault();
+				instance.hide();
+			}
+			else if (event.key === 'ArrowLeft' || event.keyCode === 37) {
+				event.preventDefault();
+				instance.step(-1);
+			}
+			else if (event.key === 'ArrowRight' || event.keyCode === 39) {
+				event.preventDefault();
+				instance.step(1);
+			}
 		});
 
 })(jQuery);

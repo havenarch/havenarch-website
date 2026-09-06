@@ -2,10 +2,20 @@
 # Theme: https://github.com/vrmiguel/paradigm-shift-jekyll-theme (HTML5 UP)
 
 title: Haven Arch Designs
-author: Haven Arch
-description: Architecture & Interior Design Studio
+author: Haven Arch Designs
+description: Architecture and interior design studio in Bengaluru, India — residential and commercial projects across India.
 email: swathi.kama@gmail.com
 address: Bengaluru - 560048
+lang: en
+
+# Default social preview image (absolute path from site root)
+image: /images/projects/abode_of_peace/cover.jpg
+logo: /images/logo.png
+
+title_separator: "|"
+
+twitter:
+  card: summary_large_image
 
 # GitHub Pages project site: https://havenarch.github.io/havenarch-website
 # For a custom domain or user site (havenarch.github.io), set baseurl to "".

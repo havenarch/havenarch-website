@@ -17,6 +17,8 @@ title_separator: "|"
 twitter:
   card: summary_large_image
 
+google_analytics: G-C1HQ5KX0P3
+
 # GitHub Pages project site: https://havenarch.github.io/havenarch-website
 # For a custom domain or user site (havenarch.github.io), set baseurl to "".
 url: "https://havenarch.github.io"

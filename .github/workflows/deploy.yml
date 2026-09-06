@@ -21,6 +21,9 @@ jobs:
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
+        with:
+          # Full history so jekyll-last-modified-at can set accurate <lastmod> dates.
+          fetch-depth: 0
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -39,6 +42,11 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+
+      - name: Verify generated sitemap
+        run: |
+          test -f _site/sitemap.xml
+          grep -q "https://havenarch.co/" _site/sitemap.xml
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

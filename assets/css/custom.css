@@ -1,9 +1,5 @@
 /* Haven Arch — layout additions on top of Paradigm Shift */
 
-#wrapper > main {
-	display: contents;
-}
-
 #wrapper:before {
 	background-color: #f5f7f8 !important;
 }

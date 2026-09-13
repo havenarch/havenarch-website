@@ -12,9 +12,10 @@ description: Learn about Haven Arch Designs — studio philosophy, design approa
 <section aria-labelledby="philosophy-heading">
 	<header>
 		<h3 id="philosophy-heading">Philosophy</h3>
+		<p>Spaces that feel calm, personal, and deeply lived in.</p>
 	</header>
 	<div class="content">
-		<p>We begin with site and brief, then reduce until structure, circulation, and atmosphere agree. Interiors are treated as architecture at arm's length—millwork, light, and surface as one composition, not a layer applied after the fact.</p>
+		<p>We believe a home or workplace should feel like a refuge—not a showroom. Every design begins with how you live, move, and unwind. We favour clarity over clutter, natural light over excess, and materials that age gracefully. The goal is not to impress visitors, but to create rooms you return to with ease.</p>
 	</div>
 </section>
 
